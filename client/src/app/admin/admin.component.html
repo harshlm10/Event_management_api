@@ -1,0 +1,55 @@
+<div class="admin-container">
+    <app-header heading="Welcome Admin" show="true"></app-header>
+    <div *ngIf="info.success" class="admin-innerbody-container">
+        <div class="addbuilder-container">
+            <div style="margin-right: 5px;">
+                <input 
+                    type="text" 
+                    placeholder="builder username" 
+                    id="builderinp1" 
+                    key = "1"
+                    (input)="handleCreateBuilderUsernameChange($event)"
+                />
+            </div>
+            <div style="margin-right: 5px;">
+                <input 
+                    type="text"
+                    placeholder="builder password" 
+                    id="builderinp2"
+                    (input)="handleCreateBuilderPasswordChange($event)"
+                />
+            </div>
+            <div>
+                <button id="builder-btn" (click) = "onBuilderCreate()">
+                    create builder
+                </button>
+            </div>
+        </div>
+        <div class="builder-info-container">
+            <!-- <app-builderCard *ngFor="let x of info.builders; index as i" style="margin-right: 10px;" [data]="info.builders[i]"></app-builderCard> -->
+            <div *ngFor = "let x of info.builders; index as i" class="inner-builder-info-container">
+                <div align="center">
+                    <h2>
+                        {{info.builders[i].username}}
+                    </h2>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Architect</th>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                        <tr *ngFor="let y of info.builders[i].inChargeof; index as j">
+                            <td *ngIf="y.task" id="{{info.builders[i].username}}architect{{j}}">{{y.architect}}</td>
+                            <td *ngIf="y.task" id="{{info.builders[i].username}}task{{j}}">{{y.task ? y.task : "No task assigned"}}</td>
+                            <td *ngIf="y.task">{{y.task ? y.status : "-"}}</td>
+                            <td *ngIf="y.task"><button (click)="onDeleteTask(info.builders[i].username , j)">Delete Task</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

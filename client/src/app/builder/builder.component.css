@@ -1,0 +1,60 @@
+.createarchitect-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    padding : 10px 10px 10px 10px
+   
+}
+
+.createarchitectinput-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#inp-fld1, #inp-fld2{
+    width: 200px;
+    height: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: 500;
+}
+
+.createarchitectbtn{
+    height: 25px;
+    width: 150px;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#btn-submit{
+    height: 25px;
+    width: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.assignedTasks-container{
+    border-radius: 7px;
+    border: 2px solid red;
+    margin-top: 20px;
+    padding: 5px 5px 5px 5px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

@@ -1,0 +1,11 @@
+.header-container{
+    display: flex;
+    box-shadow: 1px 1px 5px 5px red;
+}
+
+#out-btn{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}

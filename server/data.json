@@ -1,0 +1,65 @@
+[
+    {
+        "username": "builder 1",
+        "inChargeOf": [
+            {
+                "task": "Some Task number 1",
+                "architect": "Some username 1",
+                "createdAt": "Some Time 2"
+            },
+            {
+                "task": "Some Task number 2",
+                "architect": "Some username 2",
+                "createdAt": "Some Time 2"
+            },
+            {
+                "task": "Some Task number 3",
+                "architect": "Some username 3",
+                "createdAt": "Some Time 3"
+            }
+        ],
+        "CreatedAt": "Some Time"
+    },
+    {
+        "username": "builder 2",
+        "inChargeOf": [
+            {
+                "task": "Some Task number 1",
+                "architect": "Some username 1",
+                "createdAt": "Some Time 2"
+            },
+            {
+                "task": "Some Task number 2",
+                "architect": "Some username 2",
+                "createdAt": "Some Time 2"
+            }
+        ],
+        "CreatedAt": "Some Time"
+    },
+    {
+        "username": "builder 3",
+        "inChargeOf": [],
+        "CreatedAt": "Some Time"
+    },
+    {
+        "username": "builder 4",
+        "inChargeOf": [
+            {
+                "task": "Some Task number 1",
+                "architect": "Some username 1",
+                "createdAt": "Some Time 2"
+            },
+            {
+                "task": "Some Task number 2",
+                "architect": "Some username 2",
+                "createdAt": "Some Time 2"
+            },
+            {
+                "task": "Some Task number 3",
+                "architect": "Some username 3",
+                "createdAt": "Some Time 3"
+            }
+        ],
+        "CreatedAt": "Some Time"
+    }
+]

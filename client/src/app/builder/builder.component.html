@@ -1,0 +1,45 @@
+<div class="builder-container">
+    <app-header heading="Welcome {{builderName}}" show="true"></app-header>
+    <div class="createarchitect-container">
+        <div class="createarchitectinput-container">
+            <div style="margin-right: 5px;">
+                <input type="text" placeholder="Architect Username" id="inp-fld1"
+                    (input)="handleArchitectUsernameChange($event)" />
+            </div>
+            <div style="margin-right: 5px;">
+                <input type="text" placeholder="Architect password" id="inp-fld2"
+                    (input)="handleArchitectPasswordChange($event)" />
+            </div>
+            <div>
+                <button class="createarchitectbtn" (click)="onCreateArchitect()">Create Architect</button>
+            </div>
+        </div>
+    </div>
+    <div class="assignedTasks-container">
+        <table>
+            <tr>
+                <th>Architect Name</th>
+                <th>Task</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let x of info.data[0].inChargeof; index as i">
+                <td id={{i}}>
+                    {{x.architect}}
+                </td>
+                <td id=`${i}taskdesc`>
+                    {{x.task ? x.task : no_task}}
+                </td>
+                <td>
+                    {{x.task ? x.status : nstat}}
+                </td>
+                <td *ngIf = "!x.task">
+                    <button (click)="onAssignTask(i)" >Assign new Task</button>
+                </td>
+                <td *ngIf="x.task">
+                    <button (click)="onUpdateTask(i)">Update this task</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

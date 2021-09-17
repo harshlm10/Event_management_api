@@ -1,0 +1,36 @@
+.login-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inner-login-container{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text], input[type=password] {
+    width: 250px;
+    height: 25px;
+    border-radius: 2px;
+    font-size: large;
+}
+
+button{
+    width: 150px;
+    height: 25px;
+    font-size: large;
+    background-color:  lightyellow;
+}
+
+button:active{
+    transform: translateY(1px);
+}
+
+.input-container{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

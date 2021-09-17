@@ -1,0 +1,21 @@
+<div class="architect-container">
+    <app-header heading="Welcome {{architectName}}" show="true"></app-header>
+    <div class="architectTasks-container">
+        <table>
+            <tr>
+                <th>Task#</th>
+                <th>Tasks</th>
+                <th>Builder Incharge</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let x of info.tasks; index as i">
+                <td>{{i+1}}</td>
+                <td id="task{{i}}">{{x.task}}</td>
+                <td id="builder{{i}}">{{info.builder}}</td>
+                <td id="status{{i}}">{{x.status}}</td>
+                <td><button (click)="onChangeStatus(i)">Change Status</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
